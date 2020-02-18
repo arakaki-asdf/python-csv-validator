@@ -1,0 +1,14 @@
+{
+  "path": "test.csv",
+  "test: test":
+  {
+    "exclude":
+    [
+      "y >= 130"
+    ],
+    "query":
+    [
+      "y > 100"
+    ]
+  }
+}
