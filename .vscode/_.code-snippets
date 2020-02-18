@@ -1,0 +1,73 @@
+{
+  "パス指定": {
+    "scope": "json",
+    "prefix": "path",
+    "body": "\"path\": \"${1:to}/${2:path}.csv\""
+  },
+  "バリデーション": {
+    "scope": "json",
+    "prefix": "validates",
+    "body": [
+      "\"validates\":",
+      "[",
+      "\t{",
+      "\t\t\"title\": \"${1:hello}\"",
+      "\t}",
+      "]",
+    ]
+  },
+  "タイトル": {
+    "scope": "json",
+    "prefix": "title",
+    "body": "\"title\": \"${1:hello}\""
+  },
+  "クエリ": {
+    "scope": "json",
+    "prefix": "query",
+    "body": "\"query\": \"$1\""
+  },
+  "カウント": {
+    "scope": "json",
+    "prefix": "count",
+    "body": [
+      "\"count\":",
+      "{",
+      "\t\"type\": \"${1:min | max}\",",
+      "\t\"key\": \"${2:カラム名}\",",
+      "\t\"eval\": \"${3:{\\} >= 0}\"",
+      "}",
+    ]
+  },
+  "リレーション": {
+    "scope": "json",
+    "prefix": ["relation", "contains_relation"],
+    "body": [
+      "\"relation\":",
+      "{",
+      "\t\"from_key\": \"${1:現在のcsvのカラム名}\",",
+      "\t\"to_key\": \"${2:参照先のカラム名}\",",
+      "\t\"to_path\": \"${2:参照先のcsvパス}\"",
+      "}",
+    ]
+  },
+  "グループバイ": {
+    "scope": "json",
+    "prefix": "groupby",
+    "body": [
+      "\"groupby\":",
+      "{",
+      "\t\"key\": \"${1:グループ化するカラム名}\",",
+      "}",
+    ]
+  },
+  "重複チェック": {
+    "scope": "json",
+    "prefix": "duplicate",
+    "body": "\"duplicate\": \"${1:重複チェックするカラム名}\"",
+  },
+  "キー": {
+    "scope": "json",
+    "prefix": "key",
+    "body": "\"key\": \"$1\"",
+  }
+}

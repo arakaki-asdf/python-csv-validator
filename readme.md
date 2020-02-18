@@ -1,0 +1,4 @@
+- python 3.7以降
+- pip install pandas
+- pip install mypy
+    - vscode setting.json { "python.linting.mypyEnabled": true }
